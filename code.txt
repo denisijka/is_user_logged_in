@@ -1,1 +1,27 @@
+Авторизація на сайті
+Якщо ти не авторизован то в тебе будуть кнопки Login та Sign in
+<?php
+Якщо ти авторизован на сайті тоді My account Logout
+if (is_user_logged_in()) {
+    ?>
+    <div class="box-login">
+        <a href="<?php echo get_permalink('35') ?>" class="login-button btn btn_1">My account</a>
+    </div>
+    <div class="box-signin">
+        <a class="signin-button btn btn_2" href="<?php echo wp_logout_url(); ?>">Logout</a>
+    </div>
+    <?php
+}else{
+//Якщо ти не авторизован то в тебе будуть кнопки Login та Sign in
+    ?>
+    <div class="box-login">
+        <a href="#" class="login-button btn btn_1">Login</a>
+    </div>
+    <div class="box-signin">
+        <a href="#" class="signin-button btn btn_2">Sign Up</a>
+    </div>
 
+    <?php
+}
+
+?>
